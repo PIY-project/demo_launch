@@ -19,7 +19,7 @@
     	<param name="port_robot" value="443" />
   		<param name="robot_port_number" value="6511" />
   		<param name="root_name" value="base" />
-  		<param name="tip_name" value="tool0" />
+  		<param name="tip_name" value="rpwc_tool" />
 
 
   		<param name="ip" value="$(arg ip_gripper)"/>
@@ -32,11 +32,11 @@
   		<node pkg="abb_driver" name="controller_bridge" type="controller_bridge_node" output="screen"/>
   		<node pkg="abb_controllers" name="OneTaskInvKin" type="OneTaskInvKin_node" output="screen"/>
 
-  		<node pkg="onrobot_driver" name="onrobot_interface" type="onrobot_interface.py" output="screen"/>
+  		<!-- <node pkg="onrobot_driver" name="onrobot_interface" type="onrobot_interface.py" output="screen"/> -->
 
 		<!-- RPWC BRIDGE -->
     	<node pkg="rpwc_bridge" name="abb_bridge" type="abb_bridge_node" output="screen"/>
-    	<node pkg="rpwc_bridge" name="onrobot_twofg_bridge" type="onrobot_twofg_bridge_node" output="screen"/>
+    	<!-- <node pkg="rpwc_bridge" name="onrobot_twofg_bridge" type="onrobot_twofg_bridge_node" output="screen"/> -->
 
 
 	</group>

@@ -8,7 +8,7 @@ Panels:
         - /TF1
         - /TF1/Frames1
         - /RobotModel1
-      Splitter Ratio: 0.7470588088035583
+      Splitter Ratio: 0.27979275584220886
     Tree Height: 438
   - Class: rviz/Selection
     Name: Selection
@@ -59,45 +59,41 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        camera_aligned_depth_to_color_frame:
+          Value: true
+        camera_color_frame:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
         panda_EE:
           Value: true
         panda_K:
           Value: false
         panda_link8:
           Value: false
-        setup1/L1:
+        setup1/robot1/panda_link0:
           Value: true
-        setup1/L2:
+        setup1/robot1/panda_link1:
           Value: true
-        setup1/L3:
+        setup1/robot1/panda_link2:
           Value: true
-        setup1/L4:
+        setup1/robot1/panda_link3:
           Value: true
-        setup1/L5:
+        setup1/robot1/panda_link4:
           Value: true
-        setup1/L6:
+        setup1/robot1/panda_link5:
           Value: true
-        setup1/base:
+        setup1/robot1/panda_link6:
           Value: true
-        setup1/tool0:
+        setup1/robot1/panda_link7:
           Value: true
-        setup2/panda_link0:
-          Value: true
-        setup2/panda_link1:
-          Value: true
-        setup2/panda_link2:
-          Value: true
-        setup2/panda_link3:
-          Value: true
-        setup2/panda_link4:
-          Value: true
-        setup2/panda_link5:
-          Value: true
-        setup2/panda_link6:
-          Value: true
-        setup2/panda_link7:
-          Value: false
-        setup2/panda_link8:
+        setup1/robot1/panda_link8:
           Value: true
       Marker Scale: 0.6000000238418579
       Name: TF
@@ -105,15 +101,15 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        setup2/panda_link0:
-          setup2/panda_link1:
-            setup2/panda_link2:
-              setup2/panda_link3:
-                setup2/panda_link4:
-                  setup2/panda_link5:
-                    setup2/panda_link6:
-                      setup2/panda_link7:
-                        setup2/panda_link8:
+        setup1/robot1/panda_link0:
+          setup1/robot1/panda_link1:
+            setup1/robot1/panda_link2:
+              setup1/robot1/panda_link3:
+                setup1/robot1/panda_link4:
+                  setup1/robot1/panda_link5:
+                    setup1/robot1/panda_link6:
+                      setup1/robot1/panda_link7:
+                        setup1/robot1/panda_link8:
                           {}
       Update Interval: 0
       Value: true
@@ -172,8 +168,8 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
       Name: RobotModel
-      Robot Description: setup2/robot_description
-      TF Prefix: setup2
+      Robot Description: setup1/robot1/robot_description
+      TF Prefix: setup1/robot1
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -271,7 +267,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: setup2/panda_link0
+    Fixed Frame: setup1/robot1/panda_link0
     Frame Rate: 30
   Name: root
   Tools:
@@ -336,4 +332,4 @@ Window Geometry:
     collapsed: false
   Width: 1389
   X: 531
-  Y: 29
+  Y: 27
