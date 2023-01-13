@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<include file="$(find demo_launch)/launch/gofa.launch">
+		<arg name="ns_setup" value="setup1/robot1" />
+	</include>
+
+	<include file="$(find demo_launch)/launch/onrobot_2fg.launch">
+		<arg name="ns_setup" value="setup1/robot2" />
+	</include>
+
+</launch>

@@ -2,10 +2,8 @@
 <launch>
 
 	<!-- ARGS -->
-	<arg name="ns_setup" default="setup1"/>
+	<arg name="ns_setup" default="setup1/robot1"/>
 	<arg name="ip_robot" default="192.168.131.200" doc="abb robot IP address"/>
-
-	<arg name="ip_gripper" default="192.168.125.101" doc="onrobot device IP address"/>
 
 
 	<group ns="$(arg ns_setup)">
@@ -19,12 +17,8 @@
     	<param name="port_robot" value="443" />
   		<param name="robot_port_number" value="6511" />
   		<param name="root_name" value="base" />
-  		<param name="tip_name" value="rpwc_tool" />
-
-
-  		<param name="ip" value="$(arg ip_gripper)"/>
-		<param name="model" value="twofg"/>
-		<param name="gripper_closure_topic" value="not_used"/>
+  		<param name="tip_name" value="rpwc_last_robot_link" />
+		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.3,0,0,0,1]</rosparam>
 
 	    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
@@ -32,12 +26,8 @@
   		<node pkg="abb_driver" name="controller_bridge" type="controller_bridge_node" output="screen"/>
   		<node pkg="abb_controllers" name="OneTaskInvKin" type="OneTaskInvKin_node" output="screen"/>
 
-  		<!-- <node pkg="onrobot_driver" name="onrobot_interface" type="onrobot_interface.py" output="screen"/> -->
-
 		<!-- RPWC BRIDGE -->
     	<node pkg="rpwc_bridge" name="abb_bridge" type="abb_bridge_node" output="screen"/>
-    	<!-- <node pkg="rpwc_bridge" name="onrobot_twofg_bridge" type="onrobot_twofg_bridge_node" output="screen"/> -->
-
 
 	</group>
 

@@ -2,11 +2,13 @@
 <launch>
 
 	<include file="$(find demo_launch)/launch/panda.launch">
-		<arg name="ns_setup" value="setup1/robot2" />
+		<arg name="ns_setup" value="setup1/robot1" />
+		<!-- <arg name="ns_setup" value="setup1/robot2" /> -->
 	</include>
 
-	<!-- <include file="$(find demo_launch)/launch/softhand.launch">
-		<arg name="ns_setup" value="setup1/robot3" />
-	</include> -->
+	<include file="$(find demo_launch)/launch/softhand.launch">
+		<arg name="ns_setup" value="setup1/robot2" />
+		<!-- <arg name="ns_setup" value="setup1/robot3" /> -->
+	</include>
 
 </launch>
