@@ -32,7 +32,7 @@
 
 
 		<!-- RPWC-PANDA BRIDGE -->
-    	<node pkg="rpwc_bridge" name="franka_bridge" type="franka_bridge_node" output="screen"/>
+    	<!-- <node pkg="rpwc_bridge" name="franka_bridge" type="franka_bridge_node" output="screen"/> -->
 
 
 

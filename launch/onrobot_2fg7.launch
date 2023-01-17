@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<!-- ARGS -->
+	<arg name="ns_setup" default="setup1/robot2"/>
+	<arg name="ip"              default="192.168.125.100"/>
+	<arg name="port"            default="502"/>
+	<arg name="gripper"         default="2fg7"/>
+	<arg name="changer_addr"    default="65"/>
+	<arg name="dummy"           default="false"/>
+
+	<group ns="$(arg ns_setup)">
+
+		<param name="onrobot/ip"               value="$(arg ip)" />
+		<param name="onrobot/port"             value="$(arg port)" />
+		<param name="onrobot/gripper"          value="$(arg gripper)" />
+		<param name="onrobot/changer_addr"     value="$(arg changer_addr)" />
+		<param name="onrobot/dummy"            value="$(arg dummy)" />
+
+		<node name="OnRobot2FG7TcpNode" pkg="onrobot_2fg7_control" type="OnRobot2FG7TcpNode.py" respawn="True" output="screen"/>
+
+		<!-- RPWC BRIDGE -->
+    	<node pkg="onrobot_2fg7_control" name="Onrobot2FG7Bridge" type="Onrobot2FG7Bridge_node" output="screen"/>
+
+
+	</group>
+
+</launch>

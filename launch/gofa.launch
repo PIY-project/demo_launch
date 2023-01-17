@@ -27,7 +27,7 @@
   		<node pkg="abb_controllers" name="OneTaskInvKin" type="OneTaskInvKin_node" output="screen"/>
 
 		<!-- RPWC BRIDGE -->
-    	<node pkg="rpwc_bridge" name="abb_bridge" type="abb_bridge_node" output="screen"/>
+    	<node pkg="abb_driver" name="abb_bridge" type="abb_bridge_node" output="screen"/>
 
 	</group>
 
