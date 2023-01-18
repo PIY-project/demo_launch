@@ -18,7 +18,7 @@
   		<param name="robot_port_number" value="6511" />
   		<param name="root_name" value="base" />
   		<param name="tip_name" value="rpwc_last_robot_link" />
-		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.3,0,0,0,1]</rosparam>
+		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.24,0,0,0,1]</rosparam>
 
 	    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
