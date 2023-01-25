@@ -18,7 +18,9 @@
   		<param name="robot_port_number" value="6511" />
   		<param name="root_name" value="base" />
   		<param name="tip_name" value="rpwc_last_robot_link" />
-		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.24,0,0,0,1]</rosparam>
+		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.10,0,0,0,1]</rosparam>
+		<node pkg="tf" type="static_transform_publisher" name="last_robot_link_to_EE_tf" args="0 0 0.10 0 0 0 $(arg ns_setup)/rpwc_last_robot_link $(arg ns_setup)/rpwc_EE 10" />
+
 
 	    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
@@ -28,6 +30,7 @@
 
 		<!-- RPWC BRIDGE -->
     	<node pkg="abb_driver" name="abb_bridge" type="abb_bridge_node" output="screen"/>
+
 
 	</group>
 
