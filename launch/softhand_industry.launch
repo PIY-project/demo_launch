@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<!-- ARGS -->
+	<arg name="ns_setup" default="setup1/robot2"/>
+	<arg name="ip_SH" default="192.168.1.111"/>
+
+	<group ns="$(arg ns_setup)">
+		<param name="ip" value="$(arg ip_SH)"></param>
+	    <node pkg="softhand_industry" name="sh_industry_node" type="sh_industry_node" output="screen"/>
+	</group>
+
+
+</launch>
