@@ -9,6 +9,4 @@
 		<param name="ip" value="$(arg ip_SH)"></param>
 	    <node pkg="softhand_industry" name="sh_industry_node" type="sh_industry_node" output="screen"/>
 	</group>
-
-
 </launch>

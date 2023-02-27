@@ -4,6 +4,10 @@
 	<!-- ARGS -->
 	<arg name="ns_setup" default="setup1/robot1"/>
 	<arg name="ip_robot" default="192.168.131.200" doc="abb robot IP address"/>
+	<arg name="T_last_robot_link_to_EE" default="[1,0,0,0,0,1,0,0,0,0,1,0.1,0,0,0,1]"/>
+	<arg name="root_name" default="base"/>
+	<arg name="ee_name" default="rpwc_EE"/>
+	
 
 
 	<group ns="$(arg ns_setup)">
@@ -16,12 +20,12 @@
     	<param name="max_speed_deviation" value="300" />
     	<param name="port_robot" value="443" />
   		<param name="robot_port_number" value="6511" />
-  		<param name="root_name" value="base" />
+  		<param name="root_name" value="$(arg root_name)" />
   		<param name="tip_name" value="rpwc_last_robot_link" />
-		<param name="ee_name" value="rpwc_EE" />
+		<param name="ee_name" value="$(arg ee_name)" />
 		<param name="topic_cmd_joints" value="joint_cmd" />
 
-		<rosparam param="T_last_robot_link_to_EE">[1,0,0,0,0,1,0,0,0,0,1,0.1,0,0,0,1]</rosparam>
+		<rosparam param="T_last_robot_link_to_EE" subst_value="True">$(arg T_last_robot_link_to_EE)</rosparam>
 		<rosparam param="joints_order">[0,1,2,3,4,5]</rosparam>
 		<rosparam param="gain_inv_kin">[500,20]</rosparam>
 
