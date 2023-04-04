@@ -59,41 +59,29 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        camera_aligned_depth_to_color_frame:
-          Value: true
-        camera_color_frame:
-          Value: true
-        camera_color_optical_frame:
-          Value: true
-        camera_depth_frame:
-          Value: true
-        camera_depth_optical_frame:
-          Value: true
-        camera_link:
-          Value: true
         panda_EE:
           Value: true
         panda_K:
           Value: false
         panda_link8:
           Value: false
-        setup1/robot1/panda_link0:
+        setup1/mypanda/panda_link0:
           Value: true
-        setup1/robot1/panda_link1:
+        setup1/mypanda/panda_link1:
           Value: true
-        setup1/robot1/panda_link2:
+        setup1/mypanda/panda_link2:
           Value: true
-        setup1/robot1/panda_link3:
+        setup1/mypanda/panda_link3:
           Value: true
-        setup1/robot1/panda_link4:
+        setup1/mypanda/panda_link4:
           Value: true
-        setup1/robot1/panda_link5:
+        setup1/mypanda/panda_link5:
           Value: true
-        setup1/robot1/panda_link6:
+        setup1/mypanda/panda_link6:
           Value: true
-        setup1/robot1/panda_link7:
+        setup1/mypanda/panda_link7:
           Value: true
-        setup1/robot1/panda_link8:
+        setup1/mypanda/panda_link8:
           Value: true
       Marker Scale: 0.6000000238418579
       Name: TF
@@ -101,15 +89,15 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        setup1/robot1/panda_link0:
-          setup1/robot1/panda_link1:
-            setup1/robot1/panda_link2:
-              setup1/robot1/panda_link3:
-                setup1/robot1/panda_link4:
-                  setup1/robot1/panda_link5:
-                    setup1/robot1/panda_link6:
-                      setup1/robot1/panda_link7:
-                        setup1/robot1/panda_link8:
+        setup1/mypanda/panda_link0:
+          setup1/mypanda/panda_link1:
+            setup1/mypanda/panda_link2:
+              setup1/mypanda/panda_link3:
+                setup1/mypanda/panda_link4:
+                  setup1/mypanda/panda_link5:
+                    setup1/mypanda/panda_link6:
+                      setup1/mypanda/panda_link7:
+                        setup1/mypanda/panda_link8:
                           {}
       Update Interval: 0
       Value: true
@@ -168,8 +156,8 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
       Name: RobotModel
-      Robot Description: setup1/robot1/robot_description
-      TF Prefix: setup1/robot1
+      Robot Description: setup1/mypanda/robot_description
+      TF Prefix: setup1/mypanda
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -267,7 +255,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: setup1/robot1/panda_link0
+    Fixed Frame: setup1/mypanda/panda_link0
     Frame Rate: 30
   Name: root
   Tools:

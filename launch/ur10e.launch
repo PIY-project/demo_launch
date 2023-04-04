@@ -3,6 +3,7 @@
 
 	<arg name="ns_setup" default="setup1/robot1"/>
 	<arg name="ip_robot" default="192.168.56.100" doc="abb robot IP address"/>
+	<arg name="dt_pub_pose" default="0.01" doc="dt of threadPubRobPose"/>
 	
 	<group ns="$(arg ns_setup)">
 
@@ -33,6 +34,7 @@
 		<arg name="urscript_file" default="/home/nuk1/Universal_Robots_Client_Library/resources/external_control.urscript" doc="Path to URScript that will be sent to the robot and that forms the main control program."/>
 		
 		<param name="tf_prefix" value="$(arg ns_setup)"></param>
+		<param name="dt_pub_pose" value="$(arg dt_pub_pose)"></param>
 		<param name="root_name" value="base" />
   		<param name="tip_name" value="rpwc_last_robot_link" />
 		<param name="ee_name" value="rpwc_EE" />
@@ -45,8 +47,8 @@
 
 		<include file="$(find ur_robot_driver)/launch/ur_common.launch"  pass_all_args="true"/>
 
-		<node pkg="ur_robot_driver" name="ur_interface" type="ur_interface_node" output="screen"/>
-		<node pkg="rpwc" name="rpwc_arm_controller_manager" type="rpwc_arm_controller_manager_node" output="screen"/>
+		<node pkg="ur_robot_driver" name="ur_interface" type="ur_interface_node" output="screen" required="True"/>
+		<node pkg="rpwc" name="rpwc_arm_controller_manager" type="rpwc_arm_controller_manager_node" output="screen" required="True"/>
 
 	</group>
 </launch>
