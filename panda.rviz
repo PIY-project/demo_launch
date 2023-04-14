@@ -5,11 +5,12 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /TF1
         - /TF1/Frames1
         - /RobotModel1
+        - /PointCloud22
+        - /Image1
       Splitter Ratio: 0.27979275584220886
-    Tree Height: 438
+    Tree Height: 270
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -28,7 +29,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: Image
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -59,12 +60,106 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        left_arm/teleop_des_pose:
+          Value: true
         panda_EE:
           Value: true
         panda_K:
           Value: false
         panda_link8:
           Value: false
+        qbhand_base_link:
+          Value: true
+        qbhand_index_distal_link:
+          Value: true
+        qbhand_index_distal_virtual_link:
+          Value: true
+        qbhand_index_knuckle_link:
+          Value: true
+        qbhand_index_middle_link:
+          Value: true
+        qbhand_index_middle_virtual_link:
+          Value: true
+        qbhand_index_proximal_link:
+          Value: true
+        qbhand_index_proximal_virtual_link:
+          Value: true
+        qbhand_little_distal_link:
+          Value: true
+        qbhand_little_distal_virtual_link:
+          Value: true
+        qbhand_little_knuckle_link:
+          Value: true
+        qbhand_little_middle_link:
+          Value: true
+        qbhand_little_middle_virtual_link:
+          Value: true
+        qbhand_little_proximal_link:
+          Value: true
+        qbhand_little_proximal_virtual_link:
+          Value: true
+        qbhand_middle_distal_link:
+          Value: true
+        qbhand_middle_distal_virtual_link:
+          Value: true
+        qbhand_middle_knuckle_link:
+          Value: true
+        qbhand_middle_middle_link:
+          Value: true
+        qbhand_middle_middle_virtual_link:
+          Value: true
+        qbhand_middle_proximal_link:
+          Value: true
+        qbhand_middle_proximal_virtual_link:
+          Value: true
+        qbhand_palm_link:
+          Value: true
+        qbhand_ring_distal_link:
+          Value: true
+        qbhand_ring_distal_virtual_link:
+          Value: true
+        qbhand_ring_knuckle_link:
+          Value: true
+        qbhand_ring_middle_link:
+          Value: true
+        qbhand_ring_middle_virtual_link:
+          Value: true
+        qbhand_ring_proximal_link:
+          Value: true
+        qbhand_ring_proximal_virtual_link:
+          Value: true
+        qbhand_tendon_virtual_link:
+          Value: true
+        qbhand_thumb_distal_link:
+          Value: true
+        qbhand_thumb_distal_virtual_link:
+          Value: true
+        qbhand_thumb_knuckle_link:
+          Value: true
+        qbhand_thumb_proximal_link:
+          Value: true
+        qbhand_thumb_proximal_virtual_link:
+          Value: true
+        right_arm/teleop_des_pose:
+          Value: true
+        root_link:
+          Value: true
+        setup1/myd415/aruco:
+          Value: true
+        setup1/myd415/camera_aligned_depth_to_color_frame:
+          Value: true
+        setup1/myd415/camera_color_frame:
+          Value: true
+        setup1/myd415/camera_color_optical_frame:
+          Value: true
+        setup1/myd415/camera_depth_frame:
+          Value: true
+        setup1/myd415/camera_depth_optical_frame:
+          Value: true
+        setup1/myd415/camera_link:
+          Value: true
+        setup1/mypanda/base:
+          Value: true
         setup1/mypanda/panda_link0:
           Value: true
         setup1/mypanda/panda_link1:
@@ -83,25 +178,40 @@ Visualization Manager:
           Value: true
         setup1/mypanda/panda_link8:
           Value: true
+        setup1/panda_link0:
+          Value: true
+        setup1/robot1/base:
+          Value: true
       Marker Scale: 0.6000000238418579
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        setup1/mypanda/panda_link0:
-          setup1/mypanda/panda_link1:
-            setup1/mypanda/panda_link2:
-              setup1/mypanda/panda_link3:
-                setup1/mypanda/panda_link4:
-                  setup1/mypanda/panda_link5:
-                    setup1/mypanda/panda_link6:
-                      setup1/mypanda/panda_link7:
-                        setup1/mypanda/panda_link8:
-                          {}
+        setup1/myd415/camera_link:
+          setup1/myd415/camera_aligned_depth_to_color_frame:
+            setup1/myd415/camera_color_optical_frame:
+              setup1/myd415/aruco:
+                {}
+          setup1/myd415/camera_color_frame:
+            {}
+          setup1/myd415/camera_depth_frame:
+            setup1/myd415/camera_depth_optical_frame:
+              {}
+        setup1/mypanda/base:
+          setup1/mypanda/panda_link0:
+            setup1/mypanda/panda_link1:
+              setup1/mypanda/panda_link2:
+                setup1/mypanda/panda_link3:
+                  setup1/mypanda/panda_link4:
+                    setup1/mypanda/panda_link5:
+                      setup1/mypanda/panda_link6:
+                        setup1/mypanda/panda_link7:
+                          setup1/mypanda/panda_link8:
+                            {}
       Update Interval: 0
       Value: true
-    - Alpha: 1
+    - Alpha: 0.30000001192092896
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -201,9 +311,9 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: RGB8
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4096
@@ -213,14 +323,14 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 1
       Size (m): 0.009999999776482582
-      Style: Flat Squares
-      Topic: /setup1/obj_tracked
+      Style: Points
+      Topic: /setup1/myd415/camera/depth_registered/points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Class: rviz/Camera
       Enabled: false
       Image Rendering: background and overlay
@@ -232,6 +342,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
+        "": true
         Grid: true
         Image: true
         PointCloud2: true
@@ -241,7 +352,7 @@ Visualization Manager:
       Zoom Factor: 1
     - Class: rviz/Image
       Enabled: false
-      Image Topic: /tag_detections_image
+      Image Topic: /setup1/myd415/camera/color/image_rect_color
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -251,6 +362,18 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: false
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /setup1/myd415/camera/color/image_rect_color
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -279,37 +402,37 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.9718643426895142
+      Distance: 0.48135894536972046
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.13506445288658142
-        Y: -0.12139160186052322
-        Z: 0.38315412402153015
+        X: 0.5892780423164368
+        Y: -0.1479598879814148
+        Z: 0.11656881868839264
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.39020347595214844
+      Pitch: 0.20520350337028503
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.1604224294424057
+      Yaw: 1.2754219770431519
     Saved: ~
 Window Geometry:
   Camera:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 759
+  Height: 1025
   Hide Left Dock: false
-  Hide Right Dock: false
+  Hide Right Dock: true
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000018400000241fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000241000000c900fffffffb0000000a0049006d0061006700650200000090000002a60000026e00000164fb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006102000003ca00000042000003b6000003ad000000010000010f00000241fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d00000241000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000056d00000056fc0100000002fb0000000800540069006d006501000000000000056d000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000002ce0000024100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001840000034bfc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000199000000c900fffffffb0000000a0049006d00610067006502000003b5000001e80000026e00000164fb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006102000003ca00000042000003b6000003adfb0000000a0049006d00610067006501000001dc000001ac0000001600ffffff000000010000010f00000241fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000241000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073d00000056fc0100000002fb0000000800540069006d006501000000000000073d000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005b30000034b00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -317,7 +440,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
-  Width: 1389
-  X: 531
+    collapsed: true
+  Width: 1853
+  X: 67
   Y: 27
